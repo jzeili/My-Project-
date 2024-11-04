@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String secretWord = "jzeili";
+		int maxAttempt = 5;
+		int attempt = 0;
+		String userGuess;
+		
+		System.out.println("GUESSING GAME");
+		System.out.println("You only have 5 attempts in this game.");
+		do {
+		System.out.print("Attempt " +  (attempt + 1) + ": ");
+		userGuess = sc.nextLine();
+		attempt++;
+		
+		if(userGuess.equalsIgnoreCase(secretWord)) {
+		    System.out.println("Congratulation! You guess the correct word!");
+		    break;
+		    
+		}else if (userGuess.length() < secretWord.length()) {
+		    System.out.println("Too short!");
+		}else { 
+		System.out.println("Too long!");
+		}
+		
+		}while (attempt < maxAttempt);
+		
+		if (!userGuess.equalsIgnoreCase(secretWord)) {
+		    System.out.println("Sorry your guess is wrong! The correct answer " + (secretWord));
+		}  
+	}
+}

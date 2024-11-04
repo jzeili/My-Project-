@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int sub1 = sc.nextInt();
+		int sub2 = sc.nextInt();
+		int sub3 = sc.nextInt();
+		System.out.println(grade(sub1, sub2, sub3));
+	}
+	public static String grade(int sub1, int sub2, int sub3 ) {
+	    int average =  (sub1 + sub2 + sub3) / 3;
+	    
+	    if (average > 85) {
+	        return "Passed";
+	        
+	    }else {
+	        return "Failed";
+	    }
+	    
+	    
+	}
+	
+}
